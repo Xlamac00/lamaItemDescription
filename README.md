@@ -4,14 +4,14 @@ Module created for Lama Plus s.r.o. to manage item descriptions and their transl
 Example how to initialize this module:  
 include ('./src/ItemTemplate.class.php');  
 $it = new ItemTemplate();  
-<head>  
+head  
 echo $it->headers();  
-</head>  
-<body>  
+/head  
+body  
 echo $it->draw();  
-</body>  
+/body  
 
-Variables this module is saving:
+Variables this module is saving:  
 $_SESSION[template_id]  
 $_SESSION[template_filter_page]  
 $_SESSION[template_filter_option]  
@@ -28,7 +28,7 @@ Popper - https://popper.js.org
 PHP version this module was developed on:  
 PHP 7.1  
 PHP version this module was tested for:  
-PHP 7.1, PHP 5.3  
+PHP 7.1, PHP 5.6  
  
 DB Server this module was developed on:  
 MySQL 8 (MariaDB 10.2.17)  

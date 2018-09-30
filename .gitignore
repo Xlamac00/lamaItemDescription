@@ -1,2 +1,5 @@
 .idea
+src/images
+lib/
+*.iml
 

@@ -1,0 +1,5 @@
+create table block(id INT(8) auto_increment primary key, id_template INT(8) not null, type VARCHAR(10) not null, position INT(4) not null, image VARCHAR(100), image_position VARCHAR(5), deleted INT(1) default '0');
+
+create table block_history(id INT(8) auto_increment primary key, id_block INT(8) not null, title VARCHAR(100) not null, text text, language varchar(2), author INT(8) not null, date datetime, deleted INT(1) default '0');
+
+create table template(id INT(8) auto_increment primary key, title VARCHAR(100) not null, image VARCHAR(100), author INT(8) not null, date datetime, deleted INT(1) default '0');

@@ -1,0 +1,114 @@
+
+<div class="container-fluid border border-secondary rounded mt-2 p-1" id="newblock">
+    <h4 class="text-center">Add new block</h4>
+    <div class="row">
+        <div class="col-sm text-center">
+            <button class="btn btn-primary btn-newblock px-4 mb-2" value="text">
+                <!--<i class="fas fa-file-image fa-2x"></i>-->
+                <i class="fas fa-align-left fa-2x"></i><br>
+                Text
+            </button>
+        </div>
+        <div class="col-sm text-center">
+            <button class="btn btn-primary btn-newblock px-4 mb-2" value="video">
+                <i class="fab fa-youtube fa-2x"></i><br>
+                Video
+            </button>
+        </div>
+        <div class="col-sm text-center">
+            <button class="btn btn-primary btn-newblock px-4" value="image">
+                <i class="fas fa-image fa-2x"></i><br>
+                Image
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid border border-secondary rounded mt-2 px-3 d-none" id="newblock-text">
+    <div class="row text-center my-2">
+        <button class="btn btn-outline-secondary col-sm mx-2 btn-newtext-text"
+                value="left" title="Text with image on left side" id="btn-newtext-lefttext">
+            <i class="fas fa-file-image"></i>
+            <i class="fas fa-align-left"></i>
+        </button>
+        <button class="btn btn-outline-secondary col-sm mx-2 btn-newtext-text"
+                value="center" title="Text without image" id="btn-newtext-center">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <button class="btn btn-outline-secondary col-sm mx-2 btn-newtext-text"
+                value="right" title="Text with image on right side" id="btn-newtext-righttext">
+            <i class="fas fa-align-left"></i>
+            <i class="fas fa-file-image"></i>
+        </button>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-4 bg-light text-center pt-2 p-1 text-truncate d-none" id="newtext-left">
+                <i class="far fa-image fa-3x"></i><br>
+                <span class="newtext-image-name"></span>
+            </div>
+            <div class="col-md">
+                <input type="text" class="form-control" placeholder="Text title" id="newtext-texttitle" required>
+                <textarea class="form-control" id="newtext-textarea"></textarea>
+            </div>
+            <div class="col-md-4 bg-light text-center pt-2 p-1 text-truncate d-none" id="newtext-right">
+                <i class="far fa-image fa-3x"></i><br>
+                <span class="newtext-image-name"></span>
+            </div>
+        </div>
+        <div class="row pt-2">
+            <i class="fas fa-check-square fa-2x text-success col-1 d-none" id="newtext-image-holder"></i>
+            <input type="file" name="fileToUpload" id="newtext-image" class="d-none col">
+        </div>
+        <div class="row">
+            <div class="col-12 my-2">
+                <button class="btn btn-danger float-left" id="btn-newtext-cancel" onclick="return false;">
+                    Cancel
+                </button>
+                <button class="btn btn-success float-right" id="btn-newtext-save" onclick="return false;" disabled>
+                    Save
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="container-fluid border border-secondary rounded mt-2 px-3 d-none" id="newblock-video">
+    <h4 class="text-center">Insert new video</h4>
+    <input type="text" class="form-control" placeholder="Youtube video link" id="newvideo-link">
+    <div class="row">
+        <div class="col-12 my-2">
+            <button class="btn btn-danger float-left" id="btn-newvideo-cancel" onclick="return false;">
+                Cancel
+            </button>
+            <div class="row float-right mr-1">
+                <i class="fas fa-cog fa-spin fa-2x text-primary mr-2 d-none" id="newvideo-spinner"></i>
+                <button class="btn btn-success" id="btn-newvideo-save" onclick="return false;" disabled>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid border border-secondary rounded mt-2 px-3 d-none" id="newblock-image">
+    <h4 class="text-center">Insert new image</h4>
+    <input type="text" class="form-control" placeholder="Image description" id="newimage-text">
+    <div class="row pt-2">
+        <i class="fas fa-check-square fa-2x text-success col-1 d-none" id="newimage-holder"></i>
+        <input type="file" name="fileToUpload" id="newimage-image" class="col">
+    </div>
+    <div class="row">
+        <div class="col-12 my-2">
+            <button class="btn btn-danger float-left" id="btn-newimage-cancel" onclick="return false;">
+                Cancel
+            </button>
+            <div class="row float-right">
+                <i class="fas fa-cog fa-spin fa-2x text-primary d-none" id="newimage-spinner"></i>
+                <button class="btn btn-success ml-2" id="btn-newimage-save" onclick="return false;" disabled>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
